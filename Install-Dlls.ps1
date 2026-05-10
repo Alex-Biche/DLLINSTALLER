@@ -59,11 +59,11 @@ function Invoke-Installer {
         throw "$Label installer exited with code $($proc.ExitCode)"
     }
     if ($proc.ExitCode -eq 1638) {
-        Write-Host "  $Label: a newer version is already installed (OK)."
+        Write-Host "  ${Label}: a newer version is already installed (OK)."
     } elseif ($proc.ExitCode -eq 3010) {
-        Write-Host "  $Label: installed, reboot required."
+        Write-Host "  ${Label}: installed, reboot required."
     } else {
-        Write-Host "  $Label: installed."
+        Write-Host "  ${Label}: installed."
     }
 }
 
